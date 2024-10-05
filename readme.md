@@ -1,3 +1,4 @@
+
 # Preseason Digital Notebook Example
 Name: **[INSERT NAME HERE]**
 
