@@ -34,7 +34,18 @@ public class Drivetrain extends SubsystemBase {
       leftDriveTalon.setNeutralMode(NeutralMode.Coast);
       rightDriveTalon.setNeutralMode(NeutralMode.Coast);
       rightDriveTalon.setInverted(true);
+
+      leftDriveTalon.setSensorPhase(true);
+    rightDriveTalon.setSensorPhase(true);
+
+    leftDriveTalon.configFactoryDefault();
+    leftDriveTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
+    rightDriveTalon.configFactoryDefault();
+    rightDriveTalon.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Relative, 0, 10);
     }
+
+    
+
 
     /**
      * Example command factory method.
