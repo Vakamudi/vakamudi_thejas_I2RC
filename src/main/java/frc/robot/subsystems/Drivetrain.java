@@ -63,6 +63,14 @@ public class Drivetrain extends SubsystemBase {
       NavX.reset();
     }
 
+    public double getTicks() {
+      return (leftDriveTalon.getSelectedSensorPosition(0)+rightDriveTalon.getSelectedSensorPosition(0))/2;
+    }
+
+    public double getMeters() {
+      return (getTicks() * Units.inchesToMeters(6)*Math.PI/4096);
+    }
+
 
 
     /**
@@ -77,10 +85,7 @@ public class Drivetrain extends SubsystemBase {
       SmartDashboard.putNumber("left Voltage", leftDriveTalon.getMotorOutputPercent());
       SmartDashboard.putNumber("right Voltage", rightDriveTalon.getMotorOutputPercent());
       SmartDashboard.putNumber("Angle", NavX.getAngle());
+      SmartDashboard.putNumber("robotPos", getMeters());
     }
 
-    @Override
-    public void simulationPeriodic() {
-      // This method will be called once per scheduler run during simulation
-    }
 }
