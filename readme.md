@@ -1,25 +1,25 @@
 
 # Preseason Digital Notebook Example
-Name: **[INSERT NAME HERE]**
+Name: **Thejas Vakamudi**
 
-Section: **[I2RC/ARC]**
+Section: **I2RC**
 
-Week: **[INSERT WEEK NUM HERE]**
+Week: **5**
 
 
 ## Code
 
-The main topic this week was: **[TOPIC NAME]**
+The main topic this week was: **PID and TeleOp**
 
-Commands: **[COMMANDS]**
+Commands: **PIDTurnCCW and teleOp**
 
-Subsystems: **[SUBSYSTEMS]**
+Subsystems: **RobotContainer and Drivetrain**
 
 ### How does the code work?
-Write about how it works here
+The code takes the input from the controller and uses it for the output for the wheels; so the more you push the stick the faster it goes.
 
 
 ### Important notes for future reference
 Notes about git, and helpful resources, etc. 
 
-Please put them here, they will really help you in the future 
+Don't set the motor speed to more than 0.7 max, as it will go too fast.
