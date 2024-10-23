@@ -8,6 +8,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.networktables.GenericEntry;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
@@ -24,7 +25,9 @@ import edu.wpi.first.wpilibj2.command.Command;
 
 public class Drivetrain extends SubsystemBase {
     WPI_TalonSRX leftDriveTalon;
-  WPI_TalonSRX rightDriveTalon;
+    WPI_TalonSRX rightDriveTalon;
+    Joystick joystick;
+
   private AHRS NavX = new AHRS(SPI.Port.kMXP);
 
     /** Creates a new ExampleSubsystem. */
@@ -86,6 +89,8 @@ public class Drivetrain extends SubsystemBase {
       SmartDashboard.putNumber("right Voltage", rightDriveTalon.getMotorOutputPercent());
       SmartDashboard.putNumber("Angle", NavX.getAngle());
       SmartDashboard.putNumber("robotPos", getMeters());
+      SmartDashboard.putNumber("left joystick",1);
+      SmartDashboard.putNumber("right joystick",4);
     }
 
 }
